@@ -1,6 +1,6 @@
-# AutoLoc API — Atelier 2 (Associations JPA : Cascade et Fetch)
+# AutoLoc API — Atelier 8 (Affectations, désaffectations et cascade)
 
-Java 17 · Spring Boot 3.3 · Spring Data JPA · Hibernate · MySQL · Lombok
+Java 17 · Spring Boot 3.3 · Spring Data JPA · Hibernate · MySQL · Lombok · SpringDoc (Swagger UI : http://localhost:8081/swagger-ui/index.html)
 
 ## Lancer
 1. Démarrer MySQL (user `root`, mot de passe vide par défaut — voir `application.properties`).
@@ -14,6 +14,7 @@ Java 17 · Spring Boot 3.3 · Spring Data JPA · Hibernate · MySQL · Lombok
    puis lancer l'application.
 
 ## Structure
-- `entity/` 9 entités · `enums/` 5 énumérations · `repository/` 9 repositories
+- `domain/` 9 entités (méthodes de synchronisation) · `enums/` · `repository/` 9 `I…Repository`
+- `service/` interfaces `I…Service`, `service/impl/` implémentations transactionnelles · `web/controller/` contrôleurs REST · `web/handler/` gestion des erreurs (404 / 409 / 400)
 - `sql/` schéma, données de test, requêtes de vérification
-- `docs/fetch-strategy.md` note technique de l'atelier
+- `docs/fetch-strategy.md` (Atelier 2), `docs/affectations-notes.md` (Atelier 8), `docs/swagger/` captures
